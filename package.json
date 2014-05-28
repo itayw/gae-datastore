@@ -1,0 +1,8 @@
+{
+  "name": "gae-datastore",
+  "version": "0.0.0",
+  "dependencies": {
+    "kindof": "^1.0.0",
+    "traverse": "^0.6.6"
+  }
+}
