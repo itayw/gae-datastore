@@ -15,19 +15,23 @@ var document = {
     }
   }
 };
-//var transformed = gaed.transform(document);
-//transformed._key = new Date().getTime();
-//
-//return;
-
-gaed.push('integrated-net-594', 'push-test123', [document], {}, function (err) {
+/*
+gaed.push('integrated-net-594', 'pushtest123', [document], {}, function (err) {
   if (err)
     console.log(err);
 
   console.log('push done');
 });
+*/
+var query = {
+  timeframe: 'last_month',
+  interval: 'day',
+  dimensions: ['timestamp'],
+  metrics: ['number'],
+  collection: 'pushtest123'
+};
 
-gaed.lookup('integrated-net-594', 'push-test123', {}, function (err, result) {
+gaed.lookup('integrated-net-594', 'pushtest123', query, function (err, result) {
   if (err)
     console.log(err);
 
